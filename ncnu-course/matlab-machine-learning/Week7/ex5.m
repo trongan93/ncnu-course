@@ -1,0 +1,20 @@
+% fid = fopen('about_me','w');
+% name = input('Please Enter your name:');
+% l1 = strcat('Hello, my name is', name, '\n');
+% fprintf(fid,l1);
+% id = input('Please Enter your ID number: ');
+% l2 = strcat('My ID number is ', num2str(id), '\n');
+% fprintf(fid,l2);
+% age = input('Please Enter your age: ');
+% l3 = strcat('I am', num2str(age) , ' years old \n');
+% fprintf(fid,l3);
+% fclose(fid);
+
+fid = fopen('about_me','w');
+name = input('Please Enter your name:');
+fprintf(fid,'Hello, my name is %s. \n',name);
+id = input('Please Enter your ID number: ');
+fprintf(fid,'My ID number is %d.\n',id);
+age = input('Please Enter your age: ');
+fprintf(fid,'I am %d year olds.\n',age);
+fclose(fid);
