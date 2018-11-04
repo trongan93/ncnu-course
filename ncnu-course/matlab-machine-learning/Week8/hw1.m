@@ -1,0 +1,11 @@
+t = 0:0.005:3;
+x = t.^2.*exp(-t);
+N = length(t);
+X1 = fft(x, N);
+X2 = freqz(x,N);
+Fs = 1/0.005;
+F = (0:N-1)* Fs/N;
+figure(1),subplot(4,1,1),plot(F,abs(X1));
+figure(1),subplot(4,1,2),plot(F,phase(X1));
+figure(1),subplot(4,1,3),plot(abs(X2));
+figure(1),subplot(4,1,4),plot(phase(X2));
