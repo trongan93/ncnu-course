@@ -1,6 +1,6 @@
 function [W1, W2 ,W3] = Backprop_2h(W1, W2, W3, X, D)
-%BACKPROP_2H Summary of this function goes here
-%   Detailed explanation goes here
+    %BACKPROP_2H Summary of this function goes here
+    %   Detailed explanation goes here
     alpha = .9;
     N = size(X,1);  
     for k = 1:N
@@ -26,7 +26,6 @@ function [W1, W2 ,W3] = Backprop_2h(W1, W2, W3, X, D)
         
         e2 = W2'*delta1;
         delta2 = y1.*(1-y1).*e2;
-        
         
         % To calculate the dW and W
         dW1 = alpha*delta2*x';
