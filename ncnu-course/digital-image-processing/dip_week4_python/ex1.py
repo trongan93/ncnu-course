@@ -1,15 +1,14 @@
-from scipy import misc
 import numpy as np
 
-fn = "Lena512.raw"
+filePath = "Lena512.raw"
 imgHeight = 512 
 imgWidth = 512
 
-rawdata = np.fromfile(fn,dtype=np.uint8)
+rawdata = np.fromfile(filePath,dtype=np.uint8)
 print("Raw data: ", rawdata.shape)
 imgRaw = rawdata.reshape([imgHeight,imgWidth])
 print("Image Raw data: ", imgRaw.shape)
-print('Input Image: ', fn, ', with shape ', imgRaw.shape, ', with type: ', imgRaw.dtype)
+print('Input Image: ', filePath, ', with shape ', imgRaw.shape, ', with type: ', imgRaw.dtype)
 
 import matplotlib.pyplot as plt
 plt.imshow(imgRaw, cmap="gray")
